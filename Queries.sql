@@ -1,13 +1,16 @@
 
--- Table Query
---SELECT MAX(d.total_cases) as Global_Cases, 
---		MAX(CONVERT(int, d.total_deaths)) as Global_Deaths, 
---		MAX(CONVERT(bigint, v.people_fully_vaccinated)) as Global_FullyVaccinated,
---		MAX(d.population) as Global_Population
---FROM CovidProject..DEATHS D
---JOIN CovidProject..Vaccinations V
---	ON D.date = V.date AND D.location = V.location
---WHERE d.LOCATION = 'WORLD';
+-- Table Query. Provides Global Total Cases, Total Deaths, Total Fully Vaccinated, and Population. 
+
+SELECT MAX(d.total_cases) as Global_Cases, 
+		MAX(CONVERT(int, d.total_deaths)) as Global_Deaths, 
+		MAX(CONVERT(bigint, v.people_fully_vaccinated)) as Global_FullyVaccinated,
+		MAX(d.population) as Global_Population
+FROM CovidProject..DEATHS D
+JOIN CovidProject..Vaccinations V
+	  ON D.date = V.date AND D.location = V.location
+WHERE d.LOCATION = 'WORLD';
+
+
 
 
 
@@ -16,10 +19,10 @@
 
 
 -- Line & Area Chart Query
--- Global daily COVID cases, deaths, vaccination doeses, and cumulative population fully vaccinated
+-- Time series data. Provides Global daily COVID cases, deaths, vaccination doses, and cumulative population fully vaccinated.
 
---WITH TABLE1 AS 
---(
+WITH TABLE1 AS 
+(
 --	SELECT D.Date, sum(D.new_cases_smoothed) as GlobalCases_7DayAvg, sum(cast(D.new_deaths_smoothed as float)) as GlobalDeaths_7DayAvg,
 --					sum(cast(V.new_vaccinations_smoothed as float)) as GlobalDoses_7DayAvg
 --	FROM Deaths D 
@@ -49,7 +52,8 @@
 
 
 
--- World Map Query
+
+-- World Map Query. Provides Total Cases, Total Deaths, % Infected, and % Vaccinated, for each country. 
 
 --SELECT d.Location, MAX(d.total_cases) as TotalCases,  MAX((d.total_cases/d.population))*100 as PercentInfected,
 --		MAX(cast(d.total_deaths as int)) as TotalDeaths, MAX((v.people_fully_vaccinated/v.population))*100 as PercentVaccinated
@@ -67,8 +71,10 @@
 
 
 
--- Bar Chart Query
--- Total Cases, Total Deaths, and Population, for each continent and the world.
+
+
+
+-- Bar Chart Query. Provides Total Cases, Total Deaths, and Population, for each continent.
 
 --WITH TABLE1 AS 
 --(
