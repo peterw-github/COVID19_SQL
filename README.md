@@ -14,7 +14,7 @@ In this project, I created a COVID19 Dashboard, using Tableau, Microsoft SQL Ser
 ## Walkthrough
 
 First, I planned out the dashboard. I came up with a goal for it, then figured out what the dashboards elements should be, and what kind of data each element 
-would require, in order to achieve the goal.
+would require, in order to achieve that goal.
 
 Then, I realised that A LOT of the data, in the large dataset, wouldn't be used. So, instead of bringing the ENTIRE dataset into Tableau, I decided to extract/slice out only the bits of data that I needed, and bring those much smaller slices, into Tableau, instead. (This means Tableau won't slow down, and the UI won't be cluttered).
 
