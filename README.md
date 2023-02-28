@@ -18,7 +18,7 @@ would require, in order to achieve the goal.
 
 Then, I realised that A LOT of the data, in the large dataset, wouldn't be used. So, instead of bringing the ENTIRE dataset into Tableau, I decided to extract/slice out only the bits of data that I needed, and bring those much smaller slices, into Tableau, instead. (This means Tableau won't slow down, and the UI won't be cluttered).
 
-To perform the extracting/slicing, I went with SQL. So I created a Microsoft SQL Server, then queried the server, using Microsoft SMSS.
+To perform the extracting/slicing, I went with SQL. So I uploaded the dataset to my Microsoft SQL Server, then queried the server, using Microsoft SMSS.
 
 I took the result of each query, and imported it into Tableau via an excel file, then built the corresponding element. (The free version of Tableau, doesn't allow 
 for a direct connection to a MS SQL server, hence the excel files as an intermediate step).
