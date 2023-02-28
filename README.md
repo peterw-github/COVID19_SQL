@@ -9,15 +9,14 @@ In this project, I created a COVID19 Dashboard, using Tableau, Microsoft SQL Ser
 <br>
 <br>
 <br>
+<br>
 
 ## Walkthrough
 
-First, I planned out the dashboard. I came up with a goal for it, then figured out what the dashboards elements should be, and what data each specfic element 
-would require, in order to achieve that goal.
+First, I planned out the dashboard. I came up with a goal for it, then figured out what the dashboards elements should be, and what data each element 
+would require, in order to achieve the goal.
 
-Then, I realised that A LOT of the data, in the large dataset, wouldn't be used. Thus, instead bringing the ENTIRE dataset into Tableau, I decided to 
-extract/slice out the bits of data that I needed, and bring those much smaller slices, into Tableau instead. (This means Tableau won't slow down, and the UI
-won't be cluttered).
+Then, I realised that A LOT of the data, in the large dataset, wouldn't be used. Thus, of instead bringing the ENTIRE dataset into Tableau, I decided to extract/slice out only the bits of data that I needed, and bring those much smaller slices, into Tableau, instead. (This means Tableau won't slow down, and the UI won't be cluttered).
 
 To perform the extracting/slicing, I went with SQL. So I created a Microsoft SQL Server, then queried the server, using Microsoft SMSS.
 
@@ -29,13 +28,15 @@ Once all the elements were built, I combined them, and made the dashboard, which
 
 <br>
 <br>
-<Br>
+<br>
 
 
 ## Dashboard
 
-insert link to dashboard image here:
+A snapshot of the interactive dashboard is here, for convenience: <br><br>
+![Image Of Interactive Dashboard](https://github.com/peterw-github/COVID19_SQL/blob/main/Images/COVID19-Viz.JPG)
 
+<br>
 
 The interactive dashboard, is available here: <br>
 https://public.tableau.com/app/profile/peter.wotherspoon/viz/Covid19-Viz_16775565390780/Dashboard1
@@ -49,7 +50,7 @@ https://public.tableau.com/app/profile/peter.wotherspoon/viz/Covid19-Viz_1677556
 
 ## SQL Code
 
-The queries written in SQL, are available here: <br>
+The 4 queries written in SQL, that provide the data for the 4 dashboard elements, are available here: <br>
 https://github.com/peterw-github/COVID19_SQL/blob/main/Queries.sql
 
 
@@ -57,7 +58,7 @@ https://github.com/peterw-github/COVID19_SQL/blob/main/Queries.sql
 <br>
 <br>
 <br>
-
+<br>
 
 ### Data Source
 
